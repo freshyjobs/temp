@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Viewer</title>
+</head>
+<body>
+
+<h1>Uploaded Images</h1>
+
+{% if blob_urls %}
+    <ul>
+        {% for url in blob_urls %}
+            <li>
+                <img src="{{ url }}" alt="Image">
+            </li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>No images uploaded yet.</p>
+{% endif %}
+
+</body>
+</html>
